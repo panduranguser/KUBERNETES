@@ -1,0 +1,64 @@
+# we are going to understand key value pair in yamls
+
+name: sara #space after colon (:) is mandatory to differenciate key and value
+age: 20
+city: pune
+
+---
+
+# Dictionary
+
+person: # parent
+  name: sara # child   ( equal amount of blank space is required for all the items under dictionary  )
+  age: 20 
+  city: pune  
+
+---
+# Array or List in yamls
+
+person: # Dictionary
+  name: aslam
+  age: 26
+  city: pune
+  hobbies: # list or Array
+    - singing 
+      cooking
+      reading   
+
+---
+# Multiple Array or List in yamls       
+
+person: # Dictionary
+  name: manoj
+  age: 27
+  city: pune
+  hobbies: # single array/list
+    - playing cricket
+      cooking
+      singing
+      reading
+  friends: # Multiple Array or List in yamls 
+    - name: vivek
+      age: 22
+    - name: aslam
+      age: 26
+    - name: sara
+      age: 20          
+
+--- # yaml document/file seprator
+
+persons: # parent
+  - name: sara # child   ( equal amount of blank space is required for all the items under dictionary  )
+    age: 20 
+    city: pune
+  - name: manoj # child   ( equal amount of blank space is required for all the items under dictionary  )
+    age: 25 
+    city: pune  
+      
+
+
+ 
+
+
+
+
