@@ -1,0 +1,83 @@
+# Deployment
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deploy
+  labels: 
+    app: nginx
+spec: 
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx 
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: nginx
+    spec:
+      - containers:
+          - name: nginx- container
+            image: nginx
+            ports:
+              - containerPort: 80
+                protocol: "TCP"
+
+
+
+# NodePort Service
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-frontend-svc
+spec:
+  type: NodePort
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30000 
+  selector:
+    app: nginx    
+
+---
+
+# ClusterIP
+
+apiVersion: v1
+kind: Servive
+metadata:
+  name: nginx-backend-svc
+spec:
+  type: ClusterIP
+  ports:
+    - targetPort: 80
+      port: 80 
+  selector:
+    app: nginx     
+
+---
+
+# LoadBalancer
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-lb
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30000 
+  selector:
+    app: nginx    
+   
+    
+
+
+
+
+
+
