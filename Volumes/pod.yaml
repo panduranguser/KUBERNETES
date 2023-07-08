@@ -14,3 +14,34 @@ spec:
   volumes:
   - name: data-volume
     emptyDir: {}
+
+
+---
+
+# or use Deployment 
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-pod
+  template:
+    metadata:
+      labels:
+        app: data-pod
+    spec:
+      containers:
+      - name: data-container
+        image: busybox
+        command: ["/bin/sh", "-c"]
+        args: ["while true; do echo $(date) >> /data/output.txt; sleep 1; done"]
+        volumeMounts:
+        - name: data-volume
+          mountPath: /data
+      volumes:
+      - name: data-volume
+        emptyDir: {}
