@@ -9,7 +9,8 @@
 
 # After Git:
 
-![business-org](https://github.com/rizwan141/KUBERNETES/assets/103893307/5ca81cb1-ed54-4d87-a04f-5a3643319edb)
+![image](https://github.com/rizwan141/k8s/assets/103893307/33eaf6f6-36ad-4d3a-bf54-da3d596bdf52)
+
 
 - Every developer has an entire copy of the code on their local systems
 - Any changes made to the source code can be tracked by others
