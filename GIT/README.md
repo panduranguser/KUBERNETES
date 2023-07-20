@@ -1,6 +1,7 @@
 # Before Git:
 
-![business](https://github.com/rizwan141/KUBERNETES/assets/103893307/ef4d6940-dec4-4f49-a15f-a6f59a350fce)
+![image](https://github.com/rizwan141/k8s/assets/103893307/87746501-ab28-461a-b90b-3e5501446ae6)
+
 
 - Developers used to submit their codes to the central server without having copies of their own
 - Any changes made to the source code were unknown to the other developers
