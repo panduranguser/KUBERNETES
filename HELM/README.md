@@ -109,5 +109,5 @@ REVISION 	UPDATED                 	STATUS    	CHART       	APP VERSION   	DESCRI
 
 ## Helm Cheat Sheet
 
+![image](https://github.com/rizwan141/k8s/assets/103893307/d6485912-4b87-4ee1-9327-72a9f2c95538)
 
-![Helm-cheat-sheet-by-PhoenixNAP_page-0001](https://github.com/rizwan141/KUBERNETES/assets/103893307/f018d164-73c3-4e80-a4dc-c80f9c0ba73c)
